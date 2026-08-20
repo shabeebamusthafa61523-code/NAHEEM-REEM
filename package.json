@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "npx vite",
-    "build": "vite build && npm run copy-static",
+    "build": "vite build",
     "copy-static": "xcopy /E /I /Y dist server\\public",
     "start": "node server/index.js",
     "lint": "oxlint",
