@@ -396,12 +396,12 @@ export default function Home() {
         <div className="parents-card vertical-stack reveal-on-scroll" style={{ margin: '0 auto 32px' }}>
           <div className="parents-group">
             <div className="parents-group-title">MOHAMED NAHEEM</div>
-            <div className="parents-names">S/o Abbas & Abida</div>
+            <div className="parents-names">S/o Suhra & Moideen</div>
           </div>
           <div className="parents-stack-divider">&</div>
           <div className="parents-group">
             <div className="parents-group-title">REEM FATHIMA</div>
-            <div className="parents-names">D/o Moideen & Suhra</div>
+            <div className="parents-names">D/o Abida & Abbas</div>
           </div>
         </div>
 
