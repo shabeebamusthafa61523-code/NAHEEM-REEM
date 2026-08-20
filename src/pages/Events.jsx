@@ -47,12 +47,12 @@ export default function Events() {
         <div className="parents-card" style={{ margin: '0 auto 32px' }}>
           <div className="parents-group">
             <div className="parents-group-title">PARENTS OF THE GROOM</div>
-            <div className="parents-names">Abida & Abbas</div>
+            <div className="parents-names">Abbas & Abida</div>
           </div>
           <div className="parents-divider" />
           <div className="parents-group">
             <div className="parents-group-title">PARENTS OF THE BRIDE</div>
-            <div className="parents-names">Suhra & Moideen</div>
+            <div className="parents-names">Moideen & Suhra</div>
           </div>
         </div>
 

@@ -114,7 +114,7 @@ export default function RSVP() {
                 <label>Special Wishes / Message for the Families</label>
                 <textarea
                   rows="3"
-                  placeholder="Any message for Abida & Abbas / Suhra & Moideen..."
+                  placeholder="Any message for Abbas & Abida / Moideen & Suhra..."
                   value={formData.specialNotes}
                   onChange={(e) => setFormData({ ...formData, specialNotes: e.target.value })}
                 />

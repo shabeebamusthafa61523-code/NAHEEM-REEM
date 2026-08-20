@@ -6,7 +6,7 @@ export default function Footer() {
       </div>
       <div className="footer-blessed">
         <span className="footer-blessed-label">BLESSED BY</span>
-        <span className="footer-blessed-parents">Abida & Abbas • Suhra & Moideen</span>
+        <span className="footer-blessed-parents">Abbas & Abida • Moideen & Suhra</span>
       </div>
       <div className="footer-date">21ST SEPTEMBER 2026 • 10:30 AM (NIKKAH)</div>
     </footer>
