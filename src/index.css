@@ -298,15 +298,10 @@ body {
 }
 
 .hero-video-overlay {
-  display: block;
+  display: none;
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(15, 2, 5, 0.35) 0%,
-    rgba(15, 2, 5, 0.2) 50%,
-    rgba(15, 2, 5, 0.5) 100%
-  );
+  background: transparent;
   pointer-events: none;
 }
 
@@ -483,12 +478,12 @@ body {
   font-style: normal;
   font-weight: 400;
   letter-spacing: 1px;
-  background: linear-gradient(135deg, #ffffff 0%, #fff2bd 30%, #f7dc78 65%, #d9a738 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #fff6cd 20%, #ffe066 45%, #ffd700 70%, #d4af37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   padding: 6px 12px;
-  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.98));
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 1)) drop-shadow(0 0 16px rgba(255, 215, 0, 0.75)) drop-shadow(0 0 35px rgba(0, 0, 0, 0.95));
   overflow: visible;
   animation: cinematicSoftFade 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both, ambientGlowPulse 4s ease-in-out infinite alternate 2.6s;
 }
@@ -499,12 +494,12 @@ body {
   font-style: normal;
   font-weight: 400;
   letter-spacing: 1px;
-  background: linear-gradient(135deg, #ffffff 0%, #fff2bd 30%, #f7dc78 65%, #d9a738 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #fff6cd 20%, #ffe066 45%, #ffd700 70%, #d4af37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   padding: 6px 12px;
-  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.98));
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 1)) drop-shadow(0 0 16px rgba(255, 215, 0, 0.75)) drop-shadow(0 0 35px rgba(0, 0, 0, 0.95));
   overflow: visible;
   animation: cinematicSoftFade 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both, ambientGlowPulse 4s ease-in-out infinite alternate 3.2s;
 }
@@ -514,14 +509,14 @@ body {
   font-style: normal;
   font-size: clamp(54px, 11vw, 96px);
   font-weight: 400;
-  background: linear-gradient(135deg, #fff0bd 0%, #f3d775 50%, #d4af37 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #ffe066 50%, #d4af37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: block;
   margin: -10px 0;
   padding: 4px 0;
-  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.95));
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 1)) drop-shadow(0 0 20px rgba(255, 215, 0, 0.85));
   overflow: visible;
   animation: cinematicAmpersandFade 2.0s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
 }
@@ -1720,8 +1715,12 @@ body {
   display: flex;
   overflow: hidden;
   cursor: pointer;
-  background: #000;
+  background: transparent;
   touch-action: none;
+}
+
+.splash-split-container.opening-doors {
+  pointer-events: none;
 }
 
 .splash-door {

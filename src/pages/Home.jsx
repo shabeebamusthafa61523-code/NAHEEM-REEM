@@ -10,6 +10,7 @@ export default function Home() {
   // Royal Envelope Splash Overlay & Audio States
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false)
   const [isClosingEnvelope, setIsClosingEnvelope] = useState(false)
+  const [isDoorFinished, setIsDoorFinished] = useState(false)
   const [isPlayingMusic, setIsPlayingMusic] = useState(false)
   const audioRef = useRef(null)
   const videoRef = useRef(null)
@@ -115,9 +116,10 @@ export default function Home() {
       })
     }
     setIsClosingEnvelope(true)
+    setIsEnvelopeOpen(true)
     setTimeout(() => {
-      setIsEnvelopeOpen(true)
-    }, 1150)
+      setIsDoorFinished(true)
+    }, 1200)
   }
 
   const toggleMusic = () => {
@@ -319,7 +321,7 @@ export default function Home() {
       )}
 
       {/* ─── 0. ROYAL SPLIT-DOOR SPLASH OVERLAY ─── */}
-      {!isEnvelopeOpen && (
+      {!isDoorFinished && (
         <div 
           className={`splash-split-container ${isClosingEnvelope ? 'opening-doors' : ''}`}
           onClick={handleOpenEnvelope}
