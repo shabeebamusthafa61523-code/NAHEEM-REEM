@@ -351,9 +351,17 @@ export default function Home() {
         <div className="hero-border-left" />
         <div className="hero-border-right" />
 
-        {/* Hero Background Image */}
+        {/* Hero Video Background */}
         <div className="hero-video-wrapper">
-          <img src="/hero_bg.jpg" alt="Reem Fathima & Mohamed Naheem Wedding Background" className="hero-video-bg" />
+          <video
+            ref={videoRef}
+            src="/bghero1.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="hero-video-bg"
+          />
           <div className="hero-video-overlay" />
         </div>
 
