@@ -7,6 +7,7 @@
 }
 
 :root {
+  color-scheme: dark;
   --bg: #200307;
   --bg-card: rgba(20, 2, 5, 0.6);
   --bg-card-hover: rgba(35, 4, 9, 0.78);
@@ -460,7 +461,7 @@ body {
   word-wrap: break-word;
   overflow-wrap: break-word;
   overflow: visible;
-  text-shadow: 0 4px 18px rgba(0,0,0,0.98), 0 10px 35px rgba(0,0,0,0.98);
+  text-shadow: none;
 }
 
 .hero-names.two-rows {
@@ -483,9 +484,9 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   padding: 6px 12px;
-  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 1)) drop-shadow(0 0 18px rgba(243, 215, 117, 0.85)) drop-shadow(0 0 35px rgba(0, 0, 0, 0.95));
+  filter: none;
   overflow: visible;
-  animation: cinematicSoftFade 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both, ambientGlowPulse 4s ease-in-out infinite alternate 2.6s;
+  animation: cinematicSoftFade 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 }
 
 .hero-names.two-rows .groom-name {
@@ -499,9 +500,9 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   padding: 6px 12px;
-  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 1)) drop-shadow(0 0 18px rgba(243, 215, 117, 0.85)) drop-shadow(0 0 35px rgba(0, 0, 0, 0.95));
+  filter: none;
   overflow: visible;
-  animation: cinematicSoftFade 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both, ambientGlowPulse 4s ease-in-out infinite alternate 3.2s;
+  animation: cinematicSoftFade 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
 }
 
 .hero-names.two-rows .and-symbol {
@@ -516,7 +517,7 @@ body {
   display: block;
   margin: -10px 0;
   padding: 4px 0;
-  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 1)) drop-shadow(0 0 20px rgba(243, 215, 117, 0.9));
+  filter: none;
   overflow: visible;
   animation: cinematicAmpersandFade 2.0s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
 }
