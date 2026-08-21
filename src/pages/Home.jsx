@@ -21,6 +21,13 @@ export default function Home() {
     if (!video) return
 
     video.muted = true
+    video.playsInline = true
+    
+    try {
+      video.load()
+      video.play().catch(() => {})
+    } catch (e) {}
+
     const handlePauseOrEnd = () => {
       if (!document.hidden && video.paused) {
         video.play().catch(() => {})
@@ -29,7 +36,6 @@ export default function Home() {
 
     video.addEventListener('pause', handlePauseOrEnd)
     video.addEventListener('ended', handlePauseOrEnd)
-    video.play().catch(() => {})
 
     return () => {
       video.removeEventListener('pause', handlePauseOrEnd)
@@ -354,30 +360,34 @@ export default function Home() {
         {/* Hero Video Background */}
         <div className="hero-video-wrapper">
           <video
+            key="hero-video-bghero1"
             ref={videoRef}
             src="/bghero1.mp4"
             autoPlay
             loop
             muted
             playsInline
+            preload="auto"
             className="hero-video-bg"
-          />
+          >
+            <source src="/bghero1.mp4" type="video/mp4" />
+          </video>
           <div className="hero-video-overlay" />
         </div>
 
         {/* Hero Content: Save Our Date at Top, Names in Center */}
         <div className="hero-content">
-          <div className="hero-header-top">
+          {/* <div className="hero-header-top">
             <div className="hero-ornament">Save Our Date</div>
             <div className="hero-subtitle">WE ARE GETTING MARRIED</div>
-          </div>
+          </div> */}
 
           <div className="hero-names-center">
-            <h1 className={`hero-names two-rows ${isEnvelopeOpen ? 'animated-name-reveal' : ''}`}>
+            {/* <h1 className={`hero-names two-rows ${isEnvelopeOpen ? 'animated-name-reveal' : ''}`}>
               <span className="groom-name">Mohamed Naheem</span>
               <span className="and-symbol">&</span>
               <span className="bride-name">Reem Fathima</span>
-            </h1>
+            </h1> */}
           </div>
         </div>
 
