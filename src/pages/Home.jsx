@@ -360,9 +360,9 @@ export default function Home() {
         {/* Hero Video Background */}
         <div className="hero-video-wrapper">
           <video
-            key="hero-video-bghero1"
+            key="hero-video-bghero2"
             ref={videoRef}
-            src="/bghero1.mp4"
+            src="/bghero2.mp4"
             autoPlay
             loop
             muted
@@ -370,6 +370,7 @@ export default function Home() {
             preload="auto"
             className="hero-video-bg"
           >
+            <source src="/bghero2.mp4" type="video/mp4" />
             <source src="/bghero1.mp4" type="video/mp4" />
           </video>
           <div className="hero-video-overlay" />
