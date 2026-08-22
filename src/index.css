@@ -206,18 +206,21 @@ body {
 
 /* ───── Bismillah Calligraphy ───── */
 .bismillah-text {
+  position: relative;
+  z-index: 5;
   font-family: var(--font-arabic);
-  font-size: clamp(24px, 5vw, 38px);
-  background: var(--gold-grad);
+  font-size: clamp(28px, 6vw, 44px);
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #fff6cd 25%, #ffe066 50%, #ffd700 80%, #d4af37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   direction: rtl;
   width: 100%;
   max-width: 100%;
-  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.95));
+  filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.85)) drop-shadow(0 4px 12px rgba(0, 0, 0, 1));
 }
 
 /* ───── Hero Section ───── */
