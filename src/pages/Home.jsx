@@ -15,31 +15,42 @@ export default function Home() {
   const audioRef = useRef(null)
   const videoRef = useRef(null)
 
-  // Ensure hero background video plays continuously without involuntary pauses
+  // Instant zero-lag video prebuffering and gapless background playback
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
 
     video.muted = true
     video.playsInline = true
-    
-    try {
-      video.load()
-      video.play().catch(() => {})
-    } catch (e) {}
+    video.loop = true
 
-    const handlePauseOrEnd = () => {
-      if (!document.hidden && video.paused) {
+    const attemptPlay = () => {
+      if (video.paused) {
         video.play().catch(() => {})
       }
     }
 
-    video.addEventListener('pause', handlePauseOrEnd)
-    video.addEventListener('ended', handlePauseOrEnd)
+    attemptPlay()
+
+    const handleEnded = () => {
+      video.currentTime = 0
+      video.play().catch(() => {})
+    }
+
+    const handlePause = () => {
+      if (!document.hidden && video.paused) {
+        attemptPlay()
+      }
+    }
+
+    video.addEventListener('pause', handlePause)
+    video.addEventListener('ended', handleEnded)
+    video.addEventListener('loadedmetadata', attemptPlay)
 
     return () => {
-      video.removeEventListener('pause', handlePauseOrEnd)
-      video.removeEventListener('ended', handlePauseOrEnd)
+      video.removeEventListener('pause', handlePause)
+      video.removeEventListener('ended', handleEnded)
+      video.removeEventListener('loadedmetadata', attemptPlay)
     }
   }, [])
 
@@ -120,6 +131,9 @@ export default function Home() {
       audioRef.current.play().then(() => setIsPlayingMusic(true)).catch((err) => {
         console.log('Audio autoplay prevented:', err)
       })
+    }
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {})
     }
     setIsClosingEnvelope(true)
     setIsEnvelopeOpen(true)
